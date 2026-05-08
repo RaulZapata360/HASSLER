@@ -184,7 +184,7 @@ export default function Masterplan() {
                       <span className={`badge badge-${active.status}`}>{statusConfig[active.status].label}</span>
                     </div>
                     {active.status === 'disponible' ? (
-                      <a href={`/tipologias/tipo-${active.type.toLowerCase()}`} className="btn-accent" style={{ width: '100%', textAlign: 'center', padding: '0.75rem', display: 'block' }}>Ver Plano y Cotizar →</a>
+                      <a href={`/proyectos/modulo-${active.type.toLowerCase()}`} className="btn-accent" style={{ width: '100%', textAlign: 'center', padding: '0.75rem', display: 'block' }}>Ver Plano y Cotizar →</a>
                     ) : (
                       <a href="#contacto" className="btn-outline" style={{ width: '100%', textAlign: 'center', padding: '0.75rem', display: 'block' }}>Consultar Estado</a>
                     )}
