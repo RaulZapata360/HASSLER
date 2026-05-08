@@ -5,23 +5,23 @@ import { useState } from 'react';
 
 const images = [
   {
-    src: '/galeria/Modulos/TIPO A.jpg',
+    src: '/galeria/modulos/tipo_a.jpg',
     hoverSrc: '/galeria/casa_exterior.png',
-    title: 'Tipología A',
+    title: 'Módulo A',
     desc: 'Un dormitorio con acceso oriente, diseño compacto y funcional.',
     tag: '24,44 m²'
   },
   {
-    src: '/galeria/Modulos/TIPO B.jpg',
+    src: '/galeria/modulos/tipo_b.jpg',
     hoverSrc: '/galeria/interior.png',
-    title: 'Tipología B',
+    title: 'Módulo B',
     desc: 'Distribución espejo con alta luminosidad y ventilación cruzada.',
     tag: '24,91 m²'
   },
   {
-    src: '/galeria/Modulos/TIPO C.jpg',
+    src: '/galeria/modulos/tipo_c.jpg',
     hoverSrc: '/galeria/masterplan.png',
-    title: 'Tipología C',
+    title: 'Módulo C',
     desc: 'Máxima superficie disponible con terraza techada incorporada.',
     tag: '31,69 m²'
   },

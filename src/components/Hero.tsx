@@ -82,48 +82,70 @@ export default function Hero() {
             <Link href="#masterplan" className="btn-accent">
               Ver Disponibilidad
             </Link>
-            <Link href="#tipologias" className="btn-outline">
+            <Link href="#modulos" className="btn-outline">
               Explorar Modelos →
             </Link>
           </div>
 
           {/* Trust indicators */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="stat-group"
-            style={{ display: 'flex', gap: '2.5rem', marginTop: '3rem' }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            style={{ 
+              display: 'flex', 
+              gap: '1.25rem', 
+              marginTop: '3.5rem',
+              flexWrap: 'wrap' 
+            }}
           >
             {[
-              { value: '6', label: 'Módulos Disponibles' },
-              { value: 'Metalcon', label: 'Tecnología' },
-              { value: '100%', label: 'Antisisímico' },
+              { value: '3', label: 'Módulos Únicos', icon: '✦' },
+              { value: 'Metalcon', label: 'Tecnología', icon: '✦' },
+              { value: '100%', label: 'Antisísmico', icon: '✦' },
             ].map((stat) => (
-              <div key={stat.label}>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1.75rem',
-                    fontWeight: 700,
-                    color: 'var(--accent)',
-                    lineHeight: 1,
-                  }}
-                >
-                  {stat.value}
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '0.75rem',
-                    color: 'var(--foreground-muted)',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.08em',
-                    marginTop: '0.25rem',
-                    fontWeight: 500,
-                  }}
-                >
-                  {stat.label}
+              <div 
+                key={stat.label}
+                style={{
+                  background: 'rgba(11, 17, 32, 0.4)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '12px',
+                  padding: '1rem 1.25rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  minWidth: '170px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
+                }}
+              >
+                <div style={{ fontSize: '1.25rem', color: 'var(--accent)', alignSelf: 'flex-start', marginTop: '0.2rem' }}>{stat.icon}</div>
+                <div>
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-heading)',
+                      fontSize: '1.5rem',
+                      fontWeight: 800,
+                      color: 'var(--foreground)',
+                      lineHeight: 1.1,
+                      marginBottom: '0.25rem'
+                    }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-sans)',
+                      fontSize: '0.6875rem',
+                      color: 'var(--foreground-muted)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.1em',
+                      fontWeight: 600,
+                    }}
+                  >
+                    {stat.label}
+                  </div>
                 </div>
               </div>
             ))}
@@ -137,9 +159,8 @@ export default function Hero() {
         transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
         style={{
           position: 'absolute',
-          bottom: '4rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
+          bottom: '1.5rem',
+          right: '2.5rem',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

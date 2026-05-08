@@ -10,29 +10,29 @@ const ModelViewer = dynamic(() => import('@/components/ModelViewer'), { ssr: fal
 const models = [
   { 
     id: 'A', 
-    name: 'Tipo A', 
+    name: 'Módulo A', 
     size: '24,44 m²', 
-    price: '$42.000.000', 
+    price: '800 UF', 
     features: ['Acceso Oriente', '1 Dormitorio', 'Baño en Suite', 'Concepto Abierto'],
-    slug: 'tipo-a',
+    slug: 'modulo-a',
     modelUrl: '/models/house.glb' 
   },
   { 
     id: 'B', 
-    name: 'Tipo B', 
+    name: 'Módulo B', 
     size: '24,91 m²', 
-    price: '$45.000.000', 
+    price: '820 UF', 
     features: ['Espejo Tipo A', 'Ventilación Cruzada', 'Alta Luminosidad', 'Estructura Metalcon'],
-    slug: 'tipo-b',
+    slug: 'modulo-b',
     modelUrl: '/models/house.glb' 
   },
   { 
     id: 'C', 
-    name: 'Tipo C', 
-    size: '24,91 m² + 6,78 m²', 
-    price: '$52.000.000', 
+    name: 'Módulo C', 
+    size: '24,91 m² + Terraza 6,79 m²', 
+    price: '900 UF', 
     features: ['Terraza Techada', 'Quincho Incorporado', 'Máxima Superficie', 'Acabados Premium'],
-    slug: 'tipo-c',
+    slug: 'modulo-c',
     modelUrl: '/models/house.glb' 
   },
 ];
@@ -41,16 +41,16 @@ export default function ThreeDShowcase() {
   const [activeModel, setActiveModel] = useState(models[0]);
 
   return (
-    <section id="tipologias" className="section-alt">
+    <section id="modulos" className="section-alt">
       <div className="container">
         <div style={{ marginBottom: '3.5rem', textAlign: 'center' }}>
           <span className="section-label">3 Modelos, Una Misma Calidad</span>
-          <h2 className="section-heading">Catálogo de Tipologías</h2>
+          <h2 className="section-heading">Catálogo de Módulos</h2>
           <div className="divider-gold" style={{ margin: '1.5rem auto' }} />
           <p className="section-subheading" style={{ margin: '0 auto', maxWidth: '700px' }}>
-            Cada tipología comparte la estructura Metalcon y el acabado premium. 
+            Cada módulo comparte la estructura Metalcon y el acabado premium. 
             La diferencia está en la orientación y los beneficios exclusivos de cada una. 
-            <strong> Selecciona una planta para explorar su modelo 3D.</strong>
+            <strong> Selecciona un módulo para explorar su formato 3D.</strong>
           </p>
         </div>
 
@@ -98,48 +98,56 @@ export default function ThreeDShowcase() {
                 transition={{ duration: 0.3 }}
                 style={{ flex: 1, display: 'flex', flexDirection: 'column' }}
               >
-                <div style={{ marginBottom: '2rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <div style={{ marginBottom: '2rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
                     <div>
-                      <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                      <span style={{ fontSize: '0.6875rem', fontWeight: 700, color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: '0.5rem' }}>
                         Seleccionado
                       </span>
-                      <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.25rem', fontWeight: 700, marginTop: '0.25rem' }}>
+                      <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 800, margin: 0, color: 'var(--foreground)', lineHeight: 1.1 }}>
                         {activeModel.name}
                       </h3>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--foreground)' }}>{activeModel.price}</div>
-                      <div style={{ fontSize: '0.8125rem', color: 'var(--foreground-muted)' }}>Entrega 2026</div>
+                      <div style={{ fontSize: '0.75rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.25rem' }}>
+                        Valor Desde
+                      </div>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--accent)', lineHeight: 1.1 }}>
+                        {activeModel.price}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div style={{ flex: 1 }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
-                    <div style={{ background: 'var(--background)', padding: '1rem', borderRadius: '8px' }}>
-                      <div style={{ fontSize: '0.625rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Superficie</div>
-                      <div style={{ fontWeight: 600, fontSize: '0.9375rem' }}>{activeModel.size}</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+                    <div style={{ background: 'var(--background-secondary)', padding: '1.25rem', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                      <div style={{ fontSize: '0.6875rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', fontWeight: 600 }}>Superficie</div>
+                      <div style={{ fontWeight: 700, fontSize: '1.125rem', color: 'var(--foreground)' }}>{activeModel.size}</div>
                     </div>
-                    <div style={{ background: 'var(--background)', padding: '1rem', borderRadius: '8px' }}>
-                      <div style={{ fontSize: '0.625rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Estructura</div>
-                      <div style={{ fontWeight: 600, fontSize: '0.9375rem' }}>Metalcon</div>
+                    <div style={{ background: 'var(--background-secondary)', padding: '1.25rem', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                      <div style={{ fontSize: '0.6875rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem', fontWeight: 600 }}>Estructura</div>
+                      <div style={{ fontWeight: 700, fontSize: '1.125rem', color: 'var(--foreground)' }}>Metalcon Premium</div>
                     </div>
                   </div>
 
-                  <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
-                    {activeModel.features.map((feat) => (
-                      <li key={feat} style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', fontSize: '0.875rem', color: 'var(--foreground-muted)' }}>
-                        <span style={{ color: 'var(--accent)' }}>✦</span> {feat}
-                      </li>
-                    ))}
-                  </ul>
+                  <div style={{ marginBottom: '2.5rem' }}>
+                    <h4 style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--foreground)', marginBottom: '1.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Características Principales</h4>
+                    <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                      {activeModel.features.map((feat) => (
+                        <li key={feat} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--foreground-muted)', lineHeight: 1.4 }}>
+                          <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent)', marginTop: '0.4rem', flexShrink: 0 }} />
+                          {feat}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 {/* Selectors: Floorplan Thumbnails */}
                 <div style={{ marginBottom: '2rem' }}>
                   <p style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--foreground-subtle)', textTransform: 'uppercase', marginBottom: '1rem', letterSpacing: '0.05em' }}>
-                    Cambiar Tipología:
+                    Cambiar Módulo:
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
                     {models.map((mod) => (
@@ -174,7 +182,7 @@ export default function ThreeDShowcase() {
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  <Link href={`/tipologias/${activeModel.slug}`} className="btn-accent" style={{ textAlign: 'center', width: '100%', padding: '1rem' }}>
+                  <Link href={`/proyectos/${activeModel.slug}`} className="btn-accent" style={{ textAlign: 'center', width: '100%', padding: '1rem' }}>
                     Ver Ficha y Planos →
                   </Link>
                 </div>
