@@ -35,7 +35,7 @@ export default function Masterplan() {
   useEffect(() => {
     const fetchModules = async () => {
       // Base static data that doesn't change
-      const baseData = [
+      const baseData: Array<{ name: string; type: 'A' | 'B' | 'C'; image: string; size: string; slug: string }> = [
         { name: 'Módulo 01', type: 'C', image: '/galeria/modulos/modulo_1.png', size: '24,91 m² + 6,78 m²', slug: 'modulo-01' },
         { name: 'Módulo 02', type: 'A', image: '/galeria/modulos/modulo_2.png', size: '24,44 m²', slug: 'modulo-02' },
         { name: 'Módulo 03', type: 'A', image: '/galeria/modulos/modulo_3.png', size: '24,44 m²', slug: 'modulo-03' },
