@@ -39,7 +39,7 @@ export default function Navbar() {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <img src="/galeria/LOGO.jpeg" alt="LAYEL Inmobiliaria" style={{ height: '40px', width: 'auto', borderRadius: '4px' }} />
+          <img src="/galeria/LOGO-Photoroom.png" alt="LAYEL Inmobiliaria" style={{ height: '80px', width: 'auto', borderRadius: '4px' }} />
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
             <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800, color: 'var(--foreground)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
               LAYEL
