@@ -112,7 +112,7 @@ export default async function ProjectPage({ params }: Props) {
       <footer style={{ background: 'var(--foreground)', padding: '3rem 0' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ color: 'white', fontWeight: 700 }}>Rozas 1030</span>
-          <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>© 2026 Constructora Hashler</span>
+          <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>© 2026 Inmobiliaria LAYEL</span>
         </div>
       </footer>
     </main>

@@ -57,9 +57,9 @@ export default function Hero() {
               letterSpacing: '-0.02em',
             }}
           >
-            HASSLER
+            LAYEL
             <br />
-            <em style={{ fontStyle: 'italic', color: 'var(--accent)', textTransform: 'none', letterSpacing: 'normal' }}>Constructora</em>
+            <em style={{ fontStyle: 'italic', color: 'var(--accent)', textTransform: 'none', letterSpacing: 'normal' }}>Inmobiliaria</em>
           </h1>
 
           <div className="divider-gold" />

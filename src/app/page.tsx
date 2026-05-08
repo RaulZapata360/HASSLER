@@ -82,13 +82,13 @@ export default function Home() {
               <h2 className="section-heading">Inicia tu Inversión</h2>
               <div className="divider-gold" />
               <p style={{ color: 'var(--foreground-muted)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
-                Completa el formulario y un ejecutivo de HASSLER te contactará en menos de 24 horas para agendar tu visita a la obra o resolver cualquier consulta.
+                Completa el formulario y un ejecutivo de LAYEL te contactará en menos de 24 horas para agendar tu visita a la obra o resolver cualquier consulta.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {[
                   { icon: '📍', text: 'Martínez de Rozas 1030, Concepción' },
                   { icon: '📞', text: 'Contáctanos para más información' },
-                  { icon: '✉️', text: 'hashler@constructora.cl' },
+                  { icon: '✉️', text: 'contacto@layel.cl' },
                 ].map((item) => (
                   <div key={item.text} style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
                     <span style={{ fontSize: '1.125rem' }}>{item.icon}</span>
@@ -111,14 +111,14 @@ export default function Home() {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
             <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.25rem', textTransform: 'uppercase' }}>
-              HASSLER
+              LAYEL
             </div>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-              Constructora
+              Inmobiliaria
             </div>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8125rem', fontFamily: 'var(--font-sans)' }}>
-            © 2026 Constructora Hashler · Concepción, Región del Biobío
+            © 2026 Inmobiliaria LAYEL · Concepción, Región del Biobío
           </p>
         </div>
       </footer>

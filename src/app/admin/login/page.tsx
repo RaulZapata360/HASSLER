@@ -40,7 +40,7 @@ export default function LoginPage() {
     <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--background)' }}>
       <div className="card" style={{ width: '100%', maxWidth: '400px', padding: '3rem', boxShadow: 'var(--shadow-2xl)' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>HASSLER</div>
+          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>LAYEL</div>
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Panel de Administración</div>
         </div>
 

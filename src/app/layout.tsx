@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Condominio Rozas 1030 | Constructora Hashler',
+  title: 'Condominio Rozas 1030 | Inmobiliaria LAYEL',
   description: 'Venta de viviendas modernas con tecnología Metalcon en Concepción. Alta eficiencia, rapidez y seguridad estructural.',
-  keywords: ['inmobiliaria concepción', 'viviendas metalcon', 'condominio rozas 1030', 'constructora hashler', 'vivienda unifamiliar'],
-  authors: [{ name: 'Constructora Hashler' }],
+  keywords: ['inmobiliaria concepción', 'viviendas metalcon', 'condominio rozas 1030', 'inmobiliaria layel', 'vivienda unifamiliar'],
+  authors: [{ name: 'Inmobiliaria LAYEL' }],
   openGraph: {
     title: 'Condominio Rozas 1030 | Eficiencia y Modernidad',
     description: 'Descubre el futuro de la construcción en el corazón de Concepción.',

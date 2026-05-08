@@ -38,13 +38,16 @@ export default function Navbar() {
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800, color: 'var(--foreground)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-            HASSLER
-          </span>
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.625rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.25em', fontWeight: 600 }}>
-            Constructora
-          </span>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <img src="/galeria/LOGO.jpeg" alt="LAYEL Inmobiliaria" style={{ height: '40px', width: 'auto', borderRadius: '4px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
+            <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800, color: 'var(--foreground)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              LAYEL
+            </span>
+            <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.625rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.25em', fontWeight: 600 }}>
+              Inmobiliaria
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
