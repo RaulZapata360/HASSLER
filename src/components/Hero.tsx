@@ -26,15 +26,8 @@ export default function Hero() {
           zIndex: 0,
         }}
       />
-      {/* Gradient overlay — claro, no oscuro */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to right, rgba(250,250,250,0.96) 45%, rgba(250,250,250,0.3) 100%)',
-          zIndex: 1,
-        }}
-      />
+      {/* Gradient overlay — responsive readbility */}
+      <div className="hero-gradient" style={{ position: 'absolute', inset: 0, zIndex: 1 }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 2, paddingTop: '5rem' }}>
         <motion.div
@@ -53,6 +46,7 @@ export default function Hero() {
           </motion.span>
 
           <h1
+            className="hero-title"
             style={{
               fontSize: 'clamp(2.75rem, 6vw, 4.5rem)',
               fontWeight: 800,
@@ -98,6 +92,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
+            className="stat-group"
             style={{ display: 'flex', gap: '2.5rem', marginTop: '3rem' }}
           >
             {[

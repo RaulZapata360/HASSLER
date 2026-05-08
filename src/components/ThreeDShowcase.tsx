@@ -54,7 +54,7 @@ export default function ThreeDShowcase() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: '2rem', minHeight: '650px' }}>
+        <div className="grid-showcase">
           
           {/* Left: 3D Viewer Container */}
           <div

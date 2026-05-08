@@ -55,7 +55,7 @@ export default function VisualGallery() {
           viewport={{ once: true, margin: '-80px' }}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1.75rem',
           }}
         >

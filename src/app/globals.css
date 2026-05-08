@@ -342,6 +342,65 @@ h5, h6, label, button, nav, .label {
 @media (max-width: 768px) {
   .container { padding: 0 1.25rem; }
   .section, .section-alt { padding: 5rem 0; }
+  
+  .grid-responsive-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(250,250,250,0.95) 30%, rgba(250,250,250,0.85) 60%, rgba(250,250,250,0.4) 100%) !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
+  }
+
+  .stat-group {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .grid-showcase, .grid-masterplan {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+/* Clases base para responsivo */
+.grid-responsive-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.grid-showcase {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  min-height: 650px;
+}
+
+.grid-masterplan {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, rgba(250,250,250,0.96) 45%, rgba(250,250,250,0.3) 100%);
 }
 
 /* Fade-in-up animation class para Framer Motion targets */

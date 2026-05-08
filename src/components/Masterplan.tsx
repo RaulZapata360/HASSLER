@@ -110,7 +110,7 @@ export default function Masterplan() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: '3rem', alignItems: 'start' }}>
+        <div className="grid-masterplan">
 
           <div className="card" style={{ padding: '2rem', boxShadow: 'var(--shadow-lg)', overflow: 'visible' }}>
             <svg viewBox="0 0 420 700" style={{ width: '100%', height: 'auto' }} aria-label="Masterplan del Condominio Rozas 1030">

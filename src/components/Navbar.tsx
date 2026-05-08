@@ -8,7 +8,6 @@ const navLinks = [
   { href: '#tipologias', label: 'Tipologías' },
   { href: '#masterplan', label: 'Masterplan' },
   { href: '#galeria', label: 'Galería' },
-  { href: '#calculadora', label: 'Calculadora' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
@@ -49,7 +48,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
+        <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -71,11 +70,62 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <Link href="#contacto" className="btn-accent" style={{ padding: '0.625rem 1.5rem', fontSize: '0.875rem' }}>
+        {/* CTA (Desktop) */}
+        <Link href="#contacto" className="btn-accent desktop-nav" style={{ padding: '0.625rem 1.5rem', fontSize: '0.875rem' }}>
           Cotizar Ahora
         </Link>
+
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="mobile-nav-toggle" 
+          onClick={() => setMenuOpen(!menuOpen)}
+          style={{ background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', color: 'var(--foreground)' }}
+        >
+          {menuOpen ? '✕' : '☰'}
+        </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            style={{ overflow: 'hidden', background: 'var(--background-card)', borderBottom: '1px solid var(--border)' }}
+            className="mobile-nav-dropdown"
+          >
+            <div style={{ padding: '1rem 1.25rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: '1rem',
+                    fontWeight: 500,
+                    color: 'var(--foreground)',
+                    textDecoration: 'none',
+                    padding: '0.5rem 0',
+                    borderBottom: '1px solid var(--border-subtle)',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link 
+                href="#contacto" 
+                onClick={() => setMenuOpen(false)}
+                className="btn-accent" 
+                style={{ textAlign: 'center', marginTop: '0.5rem' }}
+              >
+                Cotizar Ahora
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

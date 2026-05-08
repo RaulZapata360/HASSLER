@@ -44,7 +44,7 @@ export default function Home() {
       {/* Proyectos Section */}
       <section id="proyectos" className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="grid-responsive-2">
             <div className="card-img-wrapper" style={{ height: '500px', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2xl)' }}>
               <img src="/galeria/rozas_1030_render.png" alt="Rozas 1030 Exterior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contacto" className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="grid-responsive-2">
             {/* Left copy */}
             <div>
               <span className="section-label">Conversemos</span>
