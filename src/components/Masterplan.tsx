@@ -114,18 +114,18 @@ export default function Masterplan() {
 
           <div className="card" style={{ padding: '2rem', boxShadow: 'var(--shadow-lg)', overflow: 'visible' }}>
             <svg viewBox="0 0 420 700" style={{ width: '100%', height: 'auto' }} aria-label="Masterplan del Condominio Rozas 1030">
-              <rect x="20" y="10" width="380" height="680" rx="10" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" strokeDasharray="4 3" />
-              <text x="210" y="700" textAnchor="middle" fill="#94A3B8" fontSize="9" fontFamily="'Outfit', sans-serif" letterSpacing="1">MARTÍNEZ DE ROZAS 1030 — VÍA PÚBLICA</text>
-              <text x="210" y="30" textAnchor="middle" fill="#64748B" fontSize="10" fontFamily="'Outfit', sans-serif" fontWeight="600" letterSpacing="0.5">▼ INGRESO AL CONDOMINIO</text>
+              <rect x="20" y="10" width="380" height="680" rx="10" fill="var(--background-card)" stroke="var(--border)" strokeWidth="1.5" strokeDasharray="4 3" />
+              <text x="210" y="700" textAnchor="middle" fill="var(--foreground-muted)" fontSize="9" fontFamily="'Outfit', sans-serif" letterSpacing="1">MARTÍNEZ DE ROZAS 1030 — VÍA PÚBLICA</text>
+              <text x="210" y="30" textAnchor="middle" fill="var(--foreground-subtle)" fontSize="10" fontFamily="'Outfit', sans-serif" fontWeight="600" letterSpacing="0.5">▼ INGRESO AL CONDOMINIO</text>
 
-              <rect x={WALL_X} y="45" width={WALL_W} height="625" fill="#94A3B8" opacity="0.4" />
-              <text x={WALL_X - 10} y={45 + 625 / 2} textAnchor="middle" fill="#94A3B8" fontSize="8" fontFamily="'Outfit', sans-serif" transform={`rotate(-90, ${WALL_X - 10}, ${45 + 625 / 2})`}>MURO DE ALBAÑILERÍA</text>
+              <rect x={WALL_X} y="45" width={WALL_W} height="625" fill="var(--foreground-subtle)" opacity="0.4" />
+              <text x={WALL_X - 10} y={45 + 625 / 2} textAnchor="middle" fill="var(--foreground-subtle)" fontSize="8" fontFamily="'Outfit', sans-serif" transform={`rotate(-90, ${WALL_X - 10}, ${45 + 625 / 2})`}>MURO DE ALBAÑILERÍA</text>
 
-              <rect x={PASILLO_X} y="45" width={PASILLO_W} height="625" rx="6" fill="#E2E8F0" opacity="0.7" />
-              <text x={PASILLO_X + PASILLO_W / 2} y={45 + 625 / 2} textAnchor="middle" fill="#94A3B8" fontSize="9" fontFamily="'Outfit', sans-serif" transform={`rotate(-90, ${PASILLO_X + PASILLO_W / 2}, ${45 + 625 / 2})`}>PASILLO PEATONAL</text>
+              <rect x={PASILLO_X} y="45" width={PASILLO_W} height="625" rx="6" fill="var(--background)" opacity="0.7" />
+              <text x={PASILLO_X + PASILLO_W / 2} y={45 + 625 / 2} textAnchor="middle" fill="var(--foreground-subtle)" fontSize="9" fontFamily="'Outfit', sans-serif" transform={`rotate(-90, ${PASILLO_X + PASILLO_W / 2}, ${45 + 625 / 2})`}>PASILLO PEATONAL</text>
 
-              <rect x={MOD_X} y="50" width={MOD_W} height="50" rx="8" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1.5" />
-              <text x={MOD_X + MOD_W / 2} y="72" textAnchor="middle" fill="#3B82F6" fontSize="11" fontFamily="'Outfit', sans-serif" fontWeight="600">♿ Estacionamiento</text>
+              <rect x={MOD_X} y="50" width={MOD_W} height="50" rx="8" fill="rgba(59, 130, 246, 0.15)" stroke="#3B82F6" strokeWidth="1.5" />
+              <text x={MOD_X + MOD_W / 2} y="72" textAnchor="middle" fill="#60A5FA" fontSize="11" fontFamily="'Outfit', sans-serif" fontWeight="600">♿ Estacionamiento</text>
               <text x={MOD_X + MOD_W / 2} y="89" textAnchor="middle" fill="#93C5FD" fontSize="9" fontFamily="'Outfit', sans-serif">Personas con Discapacidad</text>
 
               {modules.map((mod, i) => {

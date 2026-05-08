@@ -64,12 +64,12 @@ export default function ThreeDShowcase() {
               overflow: 'hidden',
               boxShadow: 'var(--shadow-xl)',
               position: 'relative',
-              background: '#fcfcfc',
+              background: 'var(--background-card)',
               border: '1px solid var(--border)',
             }}
           >
             {/* Viewer Hint */}
-            <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', zIndex: 10, display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--foreground-subtle)', fontSize: '0.75rem', background: 'rgba(255,255,255,0.7)', padding: '0.4rem 0.8rem', borderRadius: '4px', backdropFilter: 'blur(4px)' }}>
+            <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', zIndex: 10, display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--foreground-subtle)', fontSize: '0.75rem', background: 'var(--glass-nav-bg)', padding: '0.4rem 0.8rem', borderRadius: '4px', backdropFilter: 'blur(4px)' }}>
               <span>🖱️ Arrastra para rotar · Scroll para Zoom</span>
             </div>
 
@@ -88,7 +88,7 @@ export default function ThreeDShowcase() {
           </div>
 
           {/* Right: Details & Selectors Interface */}
-          <div className="card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', boxShadow: 'var(--shadow-lg)', background: 'white' }}>
+          <div className="card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', boxShadow: 'var(--shadow-lg)', background: 'var(--background-card)' }}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeModel.id}
@@ -117,11 +117,11 @@ export default function ThreeDShowcase() {
 
                 <div style={{ flex: 1 }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
-                    <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '8px' }}>
+                    <div style={{ background: 'var(--background)', padding: '1rem', borderRadius: '8px' }}>
                       <div style={{ fontSize: '0.625rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Superficie</div>
                       <div style={{ fontWeight: 600, fontSize: '0.9375rem' }}>{activeModel.size}</div>
                     </div>
-                    <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '8px' }}>
+                    <div style={{ background: 'var(--background)', padding: '1rem', borderRadius: '8px' }}>
                       <div style={{ fontSize: '0.625rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Estructura</div>
                       <div style={{ fontWeight: 600, fontSize: '0.9375rem' }}>Metalcon</div>
                     </div>
@@ -148,7 +148,7 @@ export default function ThreeDShowcase() {
                         onClick={() => setActiveModel(mod)}
                         style={{
                           padding: '0',
-                          background: 'white',
+                          background: 'var(--background-card)',
                           border: activeModel.id === mod.id ? '2px solid var(--accent)' : '1px solid var(--border)',
                           borderRadius: '8px',
                           overflow: 'hidden',
@@ -158,7 +158,7 @@ export default function ThreeDShowcase() {
                           boxShadow: activeModel.id === mod.id ? 'var(--shadow-md)' : 'none',
                         }}
                       >
-                        <div style={{ height: '60px', background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px' }}>
+                        <div style={{ height: '60px', background: 'var(--background-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4px' }}>
                           <img 
                             src={`/galeria/plano_tipo_${mod.id.toLowerCase()}.jpg`} 
                             alt={mod.name} 
