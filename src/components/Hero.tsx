@@ -20,7 +20,7 @@ export default function Hero() {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url(/galeria/hero_bg.png)',
+          backgroundImage: 'url(/galeria/hassler_modular_row_cozy.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 0,
@@ -55,15 +55,17 @@ export default function Hero() {
           <h1
             style={{
               fontSize: 'clamp(2.75rem, 6vw, 4.5rem)',
-              fontWeight: 700,
+              fontWeight: 800,
               color: 'var(--foreground)',
               marginBottom: '1.5rem',
               lineHeight: 1.05,
+              textTransform: 'uppercase',
+              letterSpacing: '-0.02em',
             }}
           >
-            Condominio
+            HASSLER
             <br />
-            <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>Rozas 1030</em>
+            <em style={{ fontStyle: 'italic', color: 'var(--accent)', textTransform: 'none', letterSpacing: 'normal' }}>Constructora</em>
           </h1>
 
           <div className="divider-gold" />
@@ -140,7 +142,7 @@ export default function Hero() {
         transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
         style={{
           position: 'absolute',
-          bottom: '2rem',
+          bottom: '4rem',
           left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex',

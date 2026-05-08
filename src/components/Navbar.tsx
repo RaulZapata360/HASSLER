@@ -40,11 +40,11 @@ export default function Navbar() {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1.1 }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 700, color: 'var(--foreground)', letterSpacing: '-0.02em' }}>
-            Rozas 1030
+          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800, color: 'var(--foreground)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+            HASSLER
           </span>
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.625rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 600 }}>
-            Constructora Hashler
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.625rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.25em', fontWeight: 600 }}>
+            Constructora
           </span>
         </Link>
 

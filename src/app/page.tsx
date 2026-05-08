@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ThreeDShowcase from '@/components/ThreeDShowcase';
 import VisualGallery from '@/components/VisualGallery';
-import SimuladorHipotecario from '@/components/SimuladorHipotecario';
 import ContactForm from '@/components/ContactForm';
 
 
@@ -47,10 +46,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
             <div className="card-img-wrapper" style={{ height: '500px', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-2xl)' }}>
-              <img src="/galeria/hero_bg.png" alt="Rozas 1030 Exterior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              <div style={{ position: 'absolute', top: '2rem', right: '2rem' }}>
-                <span className="badge badge-disponible" style={{ fontSize: '1rem', padding: '0.75rem 1.25rem' }}>En Ejecución</span>
-              </div>
+              <img src="/galeria/rozas_1030_render.png" alt="Rozas 1030 Exterior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div>
               <span className="section-label">Nuestros Proyectos</span>
@@ -74,46 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tipologías Catalog */}
-      <section id="tipologias" className="section-alt">
-        <div className="container">
-          <div style={{ marginBottom: '3.5rem' }}>
-            <span className="section-label">Catálogo de Tipologías</span>
-            <h2 className="section-heading">3 Modelos, Una Misma Calidad</h2>
-            <div className="divider-gold" />
-            <p className="section-subheading">Cada tipología comparte la estructura Metalcon y el acabado premium. La diferencia está en la orientación y los beneficios exclusivos de cada una.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
-            {[
-              { slug: 'tipo-a', name: 'Tipo A', size: '24,44 m²', price: '$42.000.000', tag: 'Acceso Oriente', img: '/galeria/plano_tipo_a.jpg', badge: 'Disponible', badgeClass: 'badge-disponible' },
-              { slug: 'tipo-b', name: 'Tipo B', size: '24,91 m²', price: '$45.000.000', tag: 'Espejo Tipo A', img: '/galeria/plano_tipo_b.jpg', badge: 'Disponible', badgeClass: 'badge-disponible' },
-              { slug: 'tipo-c', name: 'Tipo C', size: '24,91 m² + 6,78 m²', price: '$52.000.000', tag: 'Con Quincho y Terraza', img: '/galeria/plano_tipo_c.jpg', badge: 'Disponible', badgeClass: 'badge-disponible' },
-            ].map((mod) => (
-              <a key={mod.slug} href={`/tipologias/${mod.slug}`} className="card" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                <div className="card-img-wrapper" style={{ height: '240px', background: '#f8fafc' }}>
-                  <img src={mod.img} alt={`Plano ${mod.name}`} style={{ objectFit: 'contain', padding: '1rem' }} />
-                </div>
-                <div style={{ padding: '1.5rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
-                    <div>
-                      <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.375rem', fontWeight: 700 }}>{mod.name}</h3>
-                      <p style={{ fontFamily: 'var(--font-sans)', fontSize: '0.8125rem', color: 'var(--foreground-muted)', marginTop: '0.125rem' }}>{mod.tag}</p>
-                    </div>
-                    <span className={`badge ${mod.badgeClass}`}>{mod.badge}</span>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', borderTop: '1px solid var(--border)', paddingTop: '1rem', marginTop: '0.75rem' }}>
-                    <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.875rem', color: 'var(--foreground-muted)' }}>{mod.size}</span>
-                    <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.125rem', fontWeight: 700, color: 'var(--accent)' }}>{mod.price}</span>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <VisualGallery />
-      <SimuladorHipotecario />
 
       {/* Contact Section */}
       <section id="contacto" className="section">
@@ -125,7 +82,7 @@ export default function Home() {
               <h2 className="section-heading">Inicia tu Inversión</h2>
               <div className="divider-gold" />
               <p style={{ color: 'var(--foreground-muted)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
-                Completa el formulario y un ejecutivo de Constructora Hashler te contactará en menos de 24 horas para agendar tu visita a la obra o resolver cualquier consulta.
+                Completa el formulario y un ejecutivo de HASSLER te contactará en menos de 24 horas para agendar tu visita a la obra o resolver cualquier consulta.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {[
@@ -153,11 +110,11 @@ export default function Home() {
       <footer style={{ background: 'var(--foreground)', padding: '3rem 0' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.25rem' }}>
-              Rozas 1030
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.25rem', textTransform: 'uppercase' }}>
+              HASSLER
             </div>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-              Constructora Hashler
+              Constructora
             </div>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8125rem', fontFamily: 'var(--font-sans)' }}>
