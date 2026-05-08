@@ -1,25 +1,29 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
+import { useState } from 'react';
 
 const images = [
   {
-    src: '/galeria/casa_exterior.png',
-    title: 'Arquitectura Metalcon',
-    desc: 'Estructura metálica de alta eficiencia con acabados contemporáneos.',
-    tag: 'Exterior'
+    src: '/galeria/Modulos/TIPO A.jpg',
+    hoverSrc: '/galeria/casa_exterior.png',
+    title: 'Tipología A',
+    desc: 'Un dormitorio con acceso oriente, diseño compacto y funcional.',
+    tag: '24,44 m²'
   },
   {
-    src: '/galeria/interior.png',
-    title: 'Espacios Inteligentes',
-    desc: 'Diseño interior optimizado para el confort y la funcionalidad.',
-    tag: 'Interior'
+    src: '/galeria/Modulos/TIPO B.jpg',
+    hoverSrc: '/galeria/interior.png',
+    title: 'Tipología B',
+    desc: 'Distribución espejo con alta luminosidad y ventilación cruzada.',
+    tag: '24,91 m²'
   },
   {
-    src: '/galeria/masterplan.png',
-    title: 'Condominio Planificado',
-    desc: 'Distribución estratégica de módulos con áreas comunes de calidad.',
-    tag: 'Proyecto'
+    src: '/galeria/Modulos/TIPO C.jpg',
+    hoverSrc: '/galeria/masterplan.png',
+    title: 'Tipología C',
+    desc: 'Máxima superficie disponible con terraza techada incorporada.',
+    tag: '31,69 m²'
   },
 ];
 
@@ -34,6 +38,8 @@ const cardVariants: Variants = {
 };
 
 export default function VisualGallery() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <section id="galeria" className="section">
       <div className="container">
@@ -65,10 +71,30 @@ export default function VisualGallery() {
               variants={cardVariants}
               className="card"
               style={{ cursor: 'pointer' }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Image wrapper — SOLO la imagen escala, no el contenedor */}
-              <div className="card-img-wrapper" style={{ height: '280px' }}>
-                <img src={img.src} alt={img.title} />
+              <div className="card-img-wrapper" style={{ height: '280px', position: 'relative', background: 'var(--background-secondary)' }}>
+                {/* Imagen Base: Planta */}
+                <img 
+                  src={img.src} 
+                  alt={img.title} 
+                  style={{ 
+                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain', padding: '1.5rem',
+                    opacity: hoveredIndex === index ? 0 : 1,
+                    transition: 'opacity 0.4s ease'
+                  }} 
+                />
+                {/* Imagen Hover: Render Final */}
+                <img 
+                  src={img.hoverSrc} 
+                  alt={`${img.title} Render`} 
+                  style={{ 
+                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover',
+                    opacity: hoveredIndex === index ? 1 : 0,
+                    transition: 'opacity 0.4s ease'
+                  }} 
+                />
               </div>
 
               <div style={{ padding: '1.75rem' }}>

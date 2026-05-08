@@ -77,10 +77,13 @@ export default function Home() {
         <div className="container">
           <div className="grid-responsive-2">
             {/* Left copy */}
-            <div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+                <img src="/galeria/LOGO-Photoroom.png" alt="LAYEL Inmobiliaria" style={{ height: '300px', width: 'auto', display: 'block' }} />
+              </div>
               <span className="section-label">Conversemos</span>
               <h2 className="section-heading">Inicia tu Inversión</h2>
-              <div className="divider-gold" />
+              <div className="divider-gold" style={{ margin: '1.25rem auto' }} />
               <p style={{ color: 'var(--foreground-muted)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
                 Completa el formulario y un ejecutivo de LAYEL te contactará en menos de 24 horas para agendar tu visita a la obra o resolver cualquier consulta.
               </p>
@@ -107,17 +110,17 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: 'var(--foreground)', padding: '3rem 0' }}>
+      <footer style={{ background: 'var(--background-secondary)', borderTop: '1px solid var(--border)', padding: '3rem 0' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.25rem', textTransform: 'uppercase' }}>
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 800, color: 'var(--foreground)', marginBottom: '0.25rem', textTransform: 'uppercase' }}>
               LAYEL
             </div>
-            <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+            <div style={{ fontFamily: 'var(--font-sans)', fontSize: '0.75rem', color: 'var(--foreground-muted)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
               Inmobiliaria
             </div>
           </div>
-          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8125rem', fontFamily: 'var(--font-sans)' }}>
+          <p style={{ color: 'var(--foreground-muted)', fontSize: '0.8125rem', fontFamily: 'var(--font-sans)' }}>
             © 2026 Inmobiliaria LAYEL · Concepción, Región del Biobío
           </p>
         </div>
